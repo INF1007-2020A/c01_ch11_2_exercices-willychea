@@ -99,3 +99,4 @@ class Character:
 		damage = ((level_factor * weapon_factor * atk_def_factor) / 50 + 2) * modifier
 		return int(round(damage)), critical
 
+

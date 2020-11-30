@@ -26,7 +26,7 @@ class Spell:
 	pass
 
 # TODO: Déclarer la classe Magician qui étend la classe Character
-class Magician:
+class Magician(Character):
 	"""
 	Un utilisateur de magie dans le jeu. Un magicien peut utiliser des sorts, mais peut aussi utiliser des armes physiques. Sa capacité à utiliser des sorts dépend 
 
@@ -44,7 +44,14 @@ class Magician:
 	def __init__(self, name, max_hp, max_mp, attack, magic_attack, defense, level):
 		# TODO: Initialiser les attributs de Character
 		# TODO: Initialiser le `magic_attack` avec le paramètre, le `max_mp` et `mp` de la même façon que `max_hp` et `hp`, `spell` à None et `using_magic` à False.
-		pass
+
+		super().__init__(name, max_hp, attack, defense, level)
+		self.max_mp = max_mp
+		self.magic_attack = magic_attack
+		self.mp = max_mp
+		self.using_magic = False
+		self.spell = None
+	
 
 	@property
 	def mp(self):
